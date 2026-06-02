@@ -274,7 +274,7 @@ export default function OrcamentosPage() {
               <h3 className="text-lg font-bold text-[var(--solar-base2)] mb-2">{client?.fullName || 'Cliente Removido'}</h3>
               
               <div className="bg-[var(--solar-base03)] p-3 rounded-xl border border-[var(--solar-base01)] mb-4 space-y-2">
-                {order.items.map(item => (
+                {(order.items || []).map(item => (
                    <div key={item.id} className="text-sm">
                      <p className="text-[var(--solar-base0)] font-bold">📦 {item.name}</p>
                      <div className="flex flex-wrap gap-1 mt-1">

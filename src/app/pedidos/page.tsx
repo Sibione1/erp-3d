@@ -137,7 +137,7 @@ export default function PedidosPage() {
 
               <div className="bg-[var(--solar-base03)] p-4 rounded-xl border border-[var(--solar-base01)] mb-4 space-y-4">
                 <h4 className="text-xs font-bold text-[var(--solar-base1)] uppercase tracking-wider">Itens do Pedido</h4>
-                {order.items.map(item => (
+                {(order.items || []).map(item => (
                   <div key={item.id} className="flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-b border-[var(--solar-base02)] pb-3 last:border-0 last:pb-0">
                     <div>
                       <p className="text-[var(--solar-base0)] font-bold">{item.name}</p>

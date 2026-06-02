@@ -42,7 +42,7 @@ export default function Dashboard() {
   let totalMachineHours = 0;
 
   orders.filter(o => !o.isQuote).forEach(order => {
-    order.items.forEach(item => {
+    (order.items || []).forEach(item => {
       if (item.status === 'Falha') {
         totalWastedGrams += item.wastedGrams || 0;
         totalWastedCost += item.wastedCost || 0;
