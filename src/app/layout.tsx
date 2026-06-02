@@ -39,6 +39,7 @@ export default function RootLayout({
             <a href="/clientes" className="block py-2 px-4 rounded hover:bg-[var(--solar-base01)] text-[var(--solar-base1)] hover:text-[var(--solar-base3)] transition-colors">Clientes</a>
             <a href="/projetos" className="block py-2 px-4 rounded hover:bg-[var(--solar-base01)] text-[var(--solar-base1)] hover:text-[var(--solar-base3)] transition-colors">Projetos</a>
             <a href="/orcamentos" className="block py-2 px-4 rounded hover:bg-[var(--solar-base01)] text-[var(--solar-base1)] hover:text-[var(--solar-base3)] transition-colors">Orçamentos</a>
+            <a href="/pedidos" className="block py-2 px-4 rounded hover:bg-[var(--solar-base01)] text-[var(--solar-base2)] font-bold hover:text-[var(--solar-base3)] transition-colors">Pedidos</a>
           </nav>
         </aside>
         

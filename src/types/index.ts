@@ -43,14 +43,28 @@ export interface Project {
   createdAt: string;
 }
 
+export interface OrderItem {
+  id: string;
+  type: '3D_PROJECT' | 'CUSTOM';
+  name: string; // Ex: Nome do Projeto ou "Taxa de Modelagem"
+  projectId?: string;
+  filamentIds?: string[];
+  status: 'Pendente' | 'Imprimindo' | 'Concluído' | 'Falha';
+  wastedGrams: number;
+  wastedCost: number;
+  price: number;
+  cost: number;
+}
+
 export interface Order {
   id: string;
-  orderNumber: string; // Ex: ORC-001
+  orderNumber: string; // Ex: ORC-001 ou PED-001
   clientId: string;
-  projectId: string;
-  printerId: string;
-  filamentIds: string[]; // Up to 4 filaments
-  status: 'Pendente' | 'Imprimindo' | 'Concluído' | 'Falha' | 'Cancelado';
+  isQuote: boolean; // True = Orçamento, False = Pedido
+  items: OrderItem[];
+  status: 'Pendente' | 'Em Andamento' | 'Concluído' | 'Cancelado';
+  paymentStatus: 'Pendente' | 'Pago';
+  paymentMethod?: 'PIX' | 'Cartão' | 'Dinheiro' | 'Transferência';
   calculatedCost: number; // total cost
   machineCost: number;
   filamentCost: number;
