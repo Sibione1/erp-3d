@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Order, Filament } from '../../types';
-import { getStorageData } from '../../lib/storage';
+import { Order, Filament } from '../types';
+import { getStorageData } from '../lib/storage';
 
 export default function Dashboard() {
   const [orders, setOrders] = useState<Order[]>([]);
