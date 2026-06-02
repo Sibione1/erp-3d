@@ -45,12 +45,18 @@ export interface Project {
 
 export interface Order {
   id: string;
+  orderNumber: string; // Ex: ORC-001
   clientId: string;
   projectId: string;
   printerId: string;
-  filamentId: string;
+  filamentIds: string[]; // Up to 4 filaments
   status: 'Pendente' | 'Imprimindo' | 'Concluído' | 'Falha' | 'Cancelado';
-  calculatedCost: number;
-  finalPrice: number;
+  calculatedCost: number; // total cost
+  machineCost: number;
+  filamentCost: number;
+  shippingCost: number;
+  finalPrice: number; // calculated cost + margin
+  marginPercentage: number;
+  estimatedDeliveryDate?: string;
   createdAt: string;
 }
