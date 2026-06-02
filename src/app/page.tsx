@@ -1,12 +1,6 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Order, Filament } from '../types';
-import { getStorageData } from '../lib/storage';
-
-"use client";
-
-import { useState, useEffect } from 'react';
 import { Order, Filament, Project } from '../types';
 import { getStorageData } from '../lib/storage';
 
